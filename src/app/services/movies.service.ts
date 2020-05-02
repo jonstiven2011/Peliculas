@@ -44,4 +44,7 @@ export class MoviesService {
   getActorDetails(id:string){
     return this.executeQuery<RespuestaCredits>(`/movie/${id}/credits?a=1`);
   }
+  buscarPelis(texto:String){
+    return this.executeQuery(`/search/movie?query=${texto}`);
+  }
 }
